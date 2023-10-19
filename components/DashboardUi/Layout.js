@@ -1,5 +1,5 @@
 import Sidebar from '@/components/DashboardUi/Sidebar';
-
+import Header from './Header';
 
 export default function Layout({ children }) {
   return (
@@ -8,7 +8,7 @@ export default function Layout({ children }) {
         <div className="bg-white/95 rounded-xl flex flex-row w-full h-full">
           <Sidebar />
           <div className="rounded-xl flex flex-col gap-2 w-full p-4 h-full md:rounded-[20px]">
-           
+           <Header />
             <div className="flex-1 overflow-y-auto">
               {children}
             </div>
