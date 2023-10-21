@@ -9,8 +9,13 @@ export default function NftBox({ metadata, renderButton }) {
     <div>
       <h3>{metadata.name}</h3>
       <p>{metadata.description}</p>
-      <Image width={300} alt="NFT Image" src={metadata.image} />
-      {renderButton(metadata)} // Pass metadata to renderButton
+      <Image
+      isZoomed
+      width={240}
+      alt="NextUI Fruit Image with Zoom"
+      src={metadata.image}
+    />
+      {renderButton(metadata)} 
     </div>
   );
 }

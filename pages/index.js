@@ -177,7 +177,7 @@ export default function Home() {
     if (!walletConnected) {
       return (
         <button onClick={connectWallet} className={styles.button}>
-          Connect your wallet
+          Mint
         </button>
       );
     }
@@ -218,24 +218,17 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>LW3Punks</title>
+        <title>NewTrade</title>
         <meta name="description" content="LW3Punks-Dapp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.main}>
+      <div class="grid grid-cols-4  p-8 gap-8">
         <div>
-          <h1 className={styles.title}>Welcome to LW3Punks!</h1>
-          <div className={styles.description}>
-            It's an NFT collection for LearnWeb3 students.
-          </div>
+          <h1 className="text-3xl text-center flex  flex-row">Welcome to NewTrade!</h1>
+         
           {renderConnectButton()}
-        </div>
-        {/* <div className={styles.nftContainer}>
-          {nftImages.map((src, index) => (
-            <NftBox key={index} src={src} />
-          ))}
-        </div> */}
-        <div className={styles.nftContainer}>
+    
+        <div className="flex gap-8">
   {nftMetadata.map((metadata, index) => (
     <NftBox key={index} metadata={metadata} renderButton={renderButton} />
   ))}
@@ -243,7 +236,9 @@ export default function Home() {
 
       </div>
 
-      <footer className={styles.footer}>Made with &#10084; by LW3Punks</footer>
+      </div>
+      
     </div>
+
   );
 }
